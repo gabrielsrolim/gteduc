@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+    <title>
+        
+        SQLAlchemy - The Database Toolkit for Python
+        
+    </title>
+
+    <script src="/media/gteducsite//gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/jquery.js"></script>
+
+    
+        <!-- sqlalchemy.org head -->
+        
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://www.sqlalchemy.org/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" media="all" href="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/site2.css">
+<link rel="stylesheet" type="text/css" media="print" href="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/print.css">
+<script type="text/javascript" src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/doc_versions.js"></script>
+
+<script type="text/javascript">
+var site_base='';
+var docs_base='http://docs.sqlalchemy.org';
+</script>
+
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28532944-1']);
+  _gaq.push(['_setDomainName', 'sqlalchemy.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        <!-- end sqlalchemy.org head -->
+    
+
+</head>
+
+<body>
+
+<div id="wrap">
+
+
+
+
+<div id="header">
+    <div id="logo"><a href="http://www.sqlalchemy.org/"><img src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/sqla-logo6.gif" alt="SQLAlchemy" width="188" height="52"></a></div>
+    <div id="description"><img src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/dbtoolkit6.gif" alt="The Database Toolkit for Python" width="180" height="12"></div>
+</div>
+
+<div id="nav">
+    <ul>
+        <li class="active"><a href="http://www.sqlalchemy.org/">home</a></li>
+        <li><a href="http://www.sqlalchemy.org/features.html">features</a>
+            <ul>
+                <li><a href="http://www.sqlalchemy.org/features.html">Feature Overview</a></li>
+                <li><a href="http://www.sqlalchemy.org/organizations.html">Organizations</a></li>
+                <li><a href="http://www.sqlalchemy.org/quotes.html">Testimonials</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.sqlalchemy.org/blog/">blog</a></li>
+        <li><a href="http://docs.sqlalchemy.org/">documentation</a>
+            <ul class="version-listing"><li><a href="http://docs.sqlalchemy.org/latest/">Version 0.8</a></li><li><a href="http://docs.sqlalchemy.org/rel_0_7/">Version 0.7</a></li><li><a href="http://docs.sqlalchemy.org/rel_0_6/">Version 0.6</a></li><li><a href="http://docs.sqlalchemy.org/rel_0_5/">Version 0.5</a></li></ul>
+        </li>
+        <li><a href="http://www.sqlalchemy.org/trac/">wiki</a>
+            <ul>
+                <li><a href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">Recipes</a></li>
+                <li><a href="http://www.sqlalchemy.org/trac/wiki/FAQ">FAQ</a></li>
+                <li><a href="http://www.sqlalchemy.org/trac/roadmap">Roadmap</a></li>
+                <li><a href="http://www.sqlalchemy.org/trac/query?status=assigned&amp;status=new&amp;status=reopened&amp;group=milestone&amp;max=150&amp;col=id&amp;col=summary&amp;col=status&amp;col=type&amp;col=priority&amp;col=milestone&amp;col=component&amp;order=priority">Tickets by Milestone</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.sqlalchemy.org/support.html">community</a>
+            <ul>
+                <li><a href="http://www.sqlalchemy.org/support.html">Get Support</a></li>
+                <li><a href="http://www.sqlalchemy.org/participate.html">Participate</a></li>
+                <li><a href="http://www.sqlalchemy.org/develop.html">Develop</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.sqlalchemy.org/download.html">download</a></li>
+    </ul>
+
+</div>
+
+<hr>
+
+
+
+<div id="main-body" class="home">
+
+
+    <div id="content">
+    <div id="content-inner">
+    
+
+
+<h1>The Python SQL Toolkit and Object Relational Mapper</h1>
+
+<p>SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that
+gives application developers the full power and flexibility of SQL.</p>
+<p>It provides a full suite of well known enterprise-level persistence
+patterns, designed for efficient and high-performing database access, adapted
+into a simple and Pythonic domain language.</p>
+
+<h2>SQLALCHEMY'S PHILOSOPHY</h2>
+
+<p class="philos">SQL databases behave less like object collections the more
+size and performance start to matter; object collections behave less like
+tables and rows the more abstraction starts to matter. SQLAlchemy aims to
+accommodate both of these principles.</p>
+
+<p>SQLAlchemy considers the database to be a relational algebra engine, 
+    not just a collection of tables.   Rows can be selected from not only
+    tables but also joins and other select statements; any of these
+    units can be composed into a larger structure.   SQLAlchemy's expression
+    language builds on this concept from its core.</p>
+
+<p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional
+    component that provides the <strong>data mapper pattern</strong>, where
+    classes can be mapped to the database in open ended, multiple ways - 
+    allowing the object model and database schema to develop in a cleanly
+    decoupled way from the beginning.</p>
+
+<p>The main goal of SQLAlchemy is to change the way you think about databases
+and SQL! </p>
+
+<p><strong>Read some <a href="http://www.sqlalchemy.org/features.html"><strong>key features</strong></a> of SQLAlchemy,
+    as well as <a href="http://www.sqlalchemy.org/quotes.html"><strong>what people are saying</strong></a> about SQLAlchemy.</strong>
+    </p>
+
+<dl id="features">
+    <dt>Who Uses SQLAlchemy</dt>
+    <dd>
+        <p>SQLAlchemy is used by organizations such as:
+        </p><ul>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#yelp">Yelp!</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#reddit">reddit</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#firefox">Mozilla</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#urbanairship">Urban Airship</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#surveymonkey">Survey Monkey</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#openstack">The OpenStack Project</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#lolapps">lolapps</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#freshbooks">Freshbooks</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html#fedoraproject">Fedora Project</a></li>
+        </ul>
+        <p></p>
+        <a href="http://www.sqlalchemy.org/organizations.html">more...</a>
+    </dd>
+    <dt>Learn More</dt>
+    <dd>
+        <ul>
+            <li><a href="http://www.sqlalchemy.org/features.html">Overview of Key Features</a></li>
+            <li><a href="http://www.sqlalchemy.org/organizations.html">Organizations Using SQLAlchemy</a></li>
+            <li><a href="http://www.sqlalchemy.org/quotes.html">Testimonials</a></li>
+            <li><a href="http://www.sqlalchemy.org/docs/07/">Version 0.7 Documentation</a></li>
+            <li><a href="http://www.sqlalchemy.org/docs/06/">Version 0.6 Documentation</a></li>
+            <li><a href="http://www.sqlalchemy.org/trac/wiki/UsageRecipes">Recipes</a></li>
+            <li><a href="http://www.sqlalchemy.org/trac/wiki/FAQ">Developer FAQ</a></li>
+        </ul>
+    </dd>
+    <dt>Resources</dt>
+    <dd>
+        <ul>
+            <li><a href="http://www.sqlalchemy.org/download.html">Download</a></li>
+            <li><a href="http://www.sqlalchemy.org/blog/">Blog</a></li>
+            <li><a href="http://www.sqlalchemy.org/support.html">Getting Support</a></li>
+            <li><a href="http://www.sqlalchemy.org/participate.html">Participate</a></li>
+            <li><a href="http://www.sqlalchemy.org/develop.html">Development</a></li>
+        </ul>
+    </dd>
+</dl>
+
+
+
+
+
+    </div>
+    </div> <!-- end #content-inner, #content -->
+
+    
+        <div id="sidebar">
+
+<div class="box">
+    <h3>Current Release</h3>
+
+<a href="http://www.sqlalchemy.org/download.html"><b>0.7.8</b></a>
+<br>
+<a href="http://www.sqlalchemy.org/blog/2012/06/16/sqlalchemy-0.7.8-released/">What's New?</a> | 
+<a href="http://www.sqlalchemy.org/changelog/CHANGES_0_7_8">Changelog</a> | 
+<a href="http://www.sqlalchemy.org/docs/07/">docs</a>
+<br>
+Released June 16, 2012
+
+
+<br><br>
+
+<a href="http://www.sqlalchemy.org/download.html"><b>0.6.9</b></a>
+<br>
+<a href="http://www.sqlalchemy.org/blog/2012/05/05/sqlalchemy-0.6.9-released/">What's New?</a> | 
+<a href="http://www.sqlalchemy.org/changelog/CHANGES_0_6_9">Changelog</a> | 
+<a href="http://www.sqlalchemy.org/docs/06/">docs</a>
+<br>
+Released May 5, 2012
+
+<br><br>
+<a href="http://www.sqlalchemy.org/trac/wiki/08Migration"><b>Roadmap for 0.8</b></a>
+</div>
+
+<div class="box">
+    <h3>Latest News</h3>
+<ul>
+        <li><a href="http://www.sqlalchemy.org/blog/#sqlalchemy-0.7.8-released">SQLAlchemy 0.7.8 Released</a>
+        <br><span class="date">Sat, 16 Jun 2012</span>
+        </li><li><a href="http://www.sqlalchemy.org/blog/#architecture-of-open-source-applications-volume-ii-now-available">Architecture of Open Source Applications, Volume II Now Available</a>
+        <br><span class="date">Wed, 16 May 2012</span>
+        </li><li><a href="http://www.sqlalchemy.org/blog/#sqlalchemy-0.7.7-released">SQLAlchemy 0.7.7 Released</a>
+        <br><span class="date">Sat, 05 May 2012</span>
+        </li><li><a href="http://www.sqlalchemy.org/blog/#sqlalchemy-0.6.9-released">SQLAlchemy 0.6.9 Released</a>
+        <br><span class="date">Sat, 05 May 2012</span>
+        </li><li><a href="http://www.sqlalchemy.org/blog/#roadmap-for-0.8-published">Roadmap for 0.8 Published</a>
+        <br><span class="date">Sun, 01 Apr 2012</span>
+
+</li></ul>
+<a href="http://www.sqlalchemy.org/blog/">More news...</a>
+
+</div>
+
+<div class="box donate">
+    <p>Donate to SQLAlchemy!</p>
+
+<p><iframe style="border: 0; margin: 0; padding: 0;" src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/widget.html" width="48pt" height="20pt"></iframe></p>
+
+<p></p><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input name="cmd" value="_s-xclick" type="hidden">
+<input name="hosted_button_id" value="SPNTQ6ETWYMTY" type="hidden">
+<input src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/paypal.png" name="submit" alt="PayPal - The safer, easier way to pay online!" type="image" border="0">
+<img alt="" src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/pixel.gif" width="1" height="1" border="0">
+</form><p></p>
+
+<p><a href="http://flattr.com/thing/523068/SQLAlchemy" target="_blank">
+<img src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
+
+<p>Proceeds are applied to
+      project hosting costs and as
+      supplemental developer income.
+</p>
+
+</div>
+
+<div class="box">
+    <p>Have the O'Reilly book ?</p>
+<div style="text-align:center">
+<a href="http://www.oreilly.com/catalog/9780596516147/"><img src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/essential_sqla.gif" border="none"></a>
+</div>
+<p>Please note it's largely out of date !   A new book 
+    is in the works.  Check out the 
+    <a href="http://www.sqlalchemy.org/docs/">current documentation</a>,
+    most importantly the <a href="http://www.sqlalchemy.org/docs/orm/tutorial.html">ORM tutorial</a>,
+    and read *each* of the following 
+    migration guides for an update:
+    </p><ul>
+    <li><a href="http://www.sqlalchemy.org/trac/wiki/05Migration">What's new in 0.5?</a></li>
+    <li><a href="http://www.sqlalchemy.org/trac/wiki/06Migration">What's new in 0.6?</a></li>
+    <li><a href="http://www.sqlalchemy.org/trac/wiki/07Migration">What's new in 0.7?</a></li>
+    </ul>
+<p></p>
+
+</div>
+
+
+</div> <!-- end #sidebar -->
+
+    
+
+
+</div> <!-- end #main-body -->
+
+
+
+<hr>
+
+<div id="footer">
+
+    <div class="pypowered"><a href="http://www.python.org/" title="The Python Language Site"><img src="/media/gteducsite/SQLAlchemy%20-%20The%20Database%20Toolkit%20for%20Python_arquivos/python-logo.gif" alt="Python" class="pypowered" width="88" height="30"></a></div>
+
+    <div class="copyright">
+        <p>Website content copyright © by SQLAlchemy authors and contributors.
+            SQLAlchemy and its documentation are licensed under the MIT license.</p>
+        <p>SQLAlchemy is a trademark of Michael Bayer.  mike(&amp;)zzzcomputing.com
+        All rights reserved. </p>
+        <p>Website generation by <a href="http://www.blogofile.com/">Blogofile</a> and 
+                <a href="http://www.makotemplates.org/">Mako Templates for Python</a>.</p>
+     </div>
+
+    <br clear="all">
+
+</div>
+
+
+
+</div> <!-- end #wrap -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
