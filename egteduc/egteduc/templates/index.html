@@ -1,17 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html>
     <head>
         <title>GTEDUC</title>
-        <link rel="shortcut icon" href="/media/img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/media/css/index.css" type="text/css">
-        <link rel="stylesheet" href="/media/css/styles.css" type="text/css">
+	{% load staticfiles %}
+        <link rel="shortcut icon" href="{% static "img/favicon.ico"%}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static "css/index.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "css/styles.css" %}" type="text/css">
     </head>
     <body>
         <div id='tudo'>
             <div id='top'>
                 <div id='cssmenu'>
                     <ul>
-                        <li class='active '><a href='index.html'><span>Home</span></a></li>
+                        <li class='active '><a href="{% url gteducsite.views.index %}"><span>Home</span></a></li>
                         <li class='has-sub '><a href='#'><span>Products</span></a>
                             <ul>
                                 <li><a href='#'><span>Product 1</span></a></li>
