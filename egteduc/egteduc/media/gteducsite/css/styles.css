@@ -28,7 +28,7 @@
 #cssmenu > ul > li.active {
 	background:#3f3f3f; 
 	border-color:#3f3f3f;
-	/*border-radius:5px 0 0 5px;*/
+	border-radius:0px 0 0 0px;
 }
 #cssmenu > ul > li:last-of-type.active {
 	background:#3f3f3f; 
