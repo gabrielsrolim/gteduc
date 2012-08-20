@@ -15,13 +15,19 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'gteducsite.views.index')
+    url(r'^$', 'gteducsite.views.index'),
+    url(r'^empresa/','gteducsite.views.empresa'),
+    url(r'^produtoservicos/','gteducsite.views.produtoservicos'),
+    url(r'^clientes/','gteducsite.views.clientes'),
+    url(r'^suporte/','gteducsite.views.suporte'),
+    url(r'^parceiros/','gteducsite.views.parceiros'),
+    url(r'^contatos/','gteducsite.views.contatos'),
 )
-"""
+
 if settings.DEBUG:
     urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-            'document_root': settings.MEDIA_ROOT,
+        url(r'^static-egteduc/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.STATIC_ROOT,
         }),
    )
-"""
+
