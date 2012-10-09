@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        {% load staticfiles %}
+        {% block head_index %}
+        <link rel="shortcut icon" href="{% static "gteducsite/img/favicon.ico"%}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap-responsive.min.css" %}" type="text/css">
+        <script type="text/javascript" src="{% static "gteducsite/script/jquery-1.8.1.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+        <link rel="stylesheet" href="{% static "gteducsite/css/styles.css" %}" type="text/css">
+        <link rel="stylesheet" href="{% static "gteducsite/css/base.css" %}" type="text/css">
+        {% endblock %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div class="topo">
+           {% block topo %}{% endblock %} 
+        </div>
+        <div class="meio">
+            {% block meio %}{% endblock %}
+        </div>
+        <div class="rodape">
+            {% block rodape %}{% endblock %}
+        </div>
+    </body>
+</html>
