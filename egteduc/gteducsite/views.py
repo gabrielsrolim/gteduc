@@ -20,7 +20,7 @@ def suporte(request):
 	return render_to_response('gteducsite/suporte.html',{'dados' : d})
 
 def clientes(request):
-	d = Informativos.objects.order_by('id')
+	d = Informativos.objects.all()
 	return render_to_response('gteducsite/clientes.html',{'dados' : d})
 
 def parceiros(request):
