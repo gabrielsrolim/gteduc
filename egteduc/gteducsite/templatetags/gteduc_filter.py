@@ -16,7 +16,7 @@ def gteducfixedwidth(value, arg):
 
 	try:
 		length = int(arg)
-		print 'length %s' % length
+		#print 'length %s' % length
 	except ValueError: # invalid literal for int()
 		return value # Fail silently
 	if not isinstance(value, basestring):
@@ -32,7 +32,7 @@ def gteducfixedwidth(value, arg):
 		spaces_needed = (length - len(value)) + 1
 		for space_needed in range(1, spaces_needed):
 			padded = "%s " % padded
-		print 'padded: %s--' % padded	
+		#print 'padded: %s--' % padded	
 		return padded
 
 	return value

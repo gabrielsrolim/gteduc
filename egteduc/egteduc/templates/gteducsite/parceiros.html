@@ -1,102 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html>
-    <head>
-        <title>GTEDUC</title>
-        {% load staticfiles %}
-        <link rel="shortcut icon" href="{% static "gteducsite/img/favicon.ico"%}" type="image/x-icon">
-        <link rel="stylesheet" href="{% static "gteducsite/css/index.css" %}" type="text/css">
-        <link rel="stylesheet" href="{% static "gteducsite/css/styles.css" %}" type="text/css">
-        <link rel="stylesheet" href="{% static "gteducsite/css/coin-slider-styles.css" %}" type="text/css" />
-        <script type="text/javascript" src="{% static "gteducsite/script/jquery-1.8.0.min.js" %}"></script>
-        <script type="text/javascript" src="{% static "gteducsite/script/coin-slider.min.js" %}"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#coin-slider').coinslider({width:945,delay: 5000 });
-            });
-        </script>
-    </head>
-    <body>
-        <div id='site'>
-            <div id='topo'>
-                <div class='gr-container'>
-                    <div class='logo'>
-                        <img src="{% static "gteducsite/img/logo.png"%}"></img>
-                    </div>
-                    <div class='menu-container'>    
-                        <div id='cssmenu'>
-                            <ul>
-                                <li><a href="{% url gteducsite.views.index %}"><span>Home</span></a></li>
-                                <li><a href="{% url gteducsite.views.empresa %}"><span>A Empresa</span></a></li>
-                                <li><a href="{% url gteducsite.views.produtoservicos %}"><span>Produtos e Serviços</span></a></li>
-                                <li><a href="{% url gteducsite.views.suporte %}"><span>Suporte</span></a></li>
-                                <li><a href="{% url gteducsite.views.clientes %}"><span>Clientes</span></a></li>
-                                <li class='active'><a href="{% url gteducsite.views.parceiros %}"><span>Parceiros</span></a></li>
-                                <li><a href="{% url gteducsite.views.contatos %}"><span>Contato</span></a></li>
-                                <!--
-                                <li class='has-sub '><a href='#'><span>Products</span></a>
-                                    <ul>
-                                        <li><a href='#'><span>Product 1</span></a></li>
-                                        <li><a href='#'><span>Product 2</span></a></li>
-                                    </ul>
-                                </li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class='gr-container'>
-                     <div class='slide-container'>
-                        <div id='coin-slider'>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://imgs.obviousmag.org/archives/uploads/2007/070809_blog.uncovering.org_tempestade_1_small.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 1.
-                                </span>
-                            </a>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://img3.recadosanimados.com/recadosanimados-especiais/mmagics/imagens/lindas/imagem8.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 2.
-                                </span>
-                            </a>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://1.bp.blogspot.com/__GR2CBCdWDk/SWzGOnLsvHI/AAAAAAAAIb4/cQZZg1cTrl4/s400/Natureza+-+Lindas+imagens+10.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 3.
-                                </span>
-                            </a>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://www.tatendoaqui.com/wp-content/uploads/2012/06/imagens-mais-doidas-da-internet-06.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 4.
-                                </span>
-                            </a>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://www.blogers.com.br/wp-content/uploads/2009/03/imagens-de-paisagens-em-papel-de-parede.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 5.
-                                </span>
-                            </a>
-                            <a href="{% url gteducsite.views.index %}">
-                                <img src="http://1.bp.blogspot.com/-6FVbugJwJGY/Tu1h7N2uHoI/AAAAAAAACC0/f45RLass81g/s1600/imagens+e+significados.jpg"></img>
-                                <span>
-                                    GTEDUC- Grupo de Tecnologias aplicada a Educação 6.
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div id='content'>
-            <div class='gr-container'>
-                
-            </div>
-        </div>
-        <div id='footer'>
-            <div class='gr-container'>
-               
-            </div>
-        </div>
-    </body>
-</html>
-
+{% extends "gteducsite/base.html" %}
+{% block topo %}
+    {% include "gteducsite/barra_navegacao.html" %}
+{% endblock %}
+{% block meio %}
+    {% include "gteducsite/gteduc_carrocel.html"%}
+    {% include "gteducsite/gteduc_informativos.html"%}
+{% endblock %}
+{% block rodape %}
+    {% include "gteducsite/gteduc_rodape.html"%}
+{% endblock %}

@@ -4,23 +4,29 @@ from django.conf import settings
 from gteducsite.models import Informativos
 
 def index(request):
-	return render_to_response('gteducsite/index.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/index.html',{'dados' : d})
 
 def empresa(request):
-	return render_to_response('gteducsite/empresa.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/empresa.html',{'dados' : d})
 
 def produtoservicos(request):
-	return render_to_response('gteducsite/produtoservicos.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/produtoservicos.html',{'dados' : d})
 
 def suporte(request):
-	return render_to_response('gteducsite/suporte.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/suporte.html',{'dados' : d})
 
 def clientes(request):
-	d = Informativos.objects.all()
-	return render_to_response('gteducsite/clientes.html',{'index' : d})
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/clientes.html',{'dados' : d})
 
 def parceiros(request):
-	return render_to_response('gteducsite/parceiros.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/parceiros.html',{'dados' : d})
 
 def contatos(request):
-	return render_to_response('gteducsite/contatos.html')
+	d = Informativos.objects.order_by('id')
+	return render_to_response('gteducsite/contatos.html',{'dados' : d})

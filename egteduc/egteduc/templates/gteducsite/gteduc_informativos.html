@@ -1,0 +1,54 @@
+<div class="container-fluid container-egteduc">
+    <div class ="container-fluid">
+        <div class = "row row-fluid container-egteduc">
+            <div class="span8" >
+                {% load gteduc_filter %}
+                {% for informativo in dados %}
+                {% if forloop.counter0|divisibleby:3 %}
+                <div class ="container-egteduc container-fluid gteducpadding">
+                {% endif %} 
+                
+                    <div class="span4" >
+                        <h4>{{ informativo.cabecalho }}</h4>
+                        <p align="Justify"> 
+                            
+                                {{ informativo.descricao|gteducfixedwidth:300}}
+                            
+
+                            <a href="{{ informativo.link }}"> Saiba mais...</a> 
+                        </p>
+                    </div>
+                
+                    {% if forloop.counter|divisibleby:3 or forloop.last %}
+                    </div>
+                    {% endif %} 
+                
+                {% endfor %}
+                <!--<div class="span4">
+                    <h4>A Empresa</h4>
+                    <p> A GTEDUC é uma empresa inovadora que se propõe oferecer tecnologias voltadas para o meio educacional público e privado, visando desde o desenvolvimento de programas que auxiliem na gestão das instituições como também serviços especializados em educação à distância.
+    A equipe da GTEDUC é multidisciplinar, formada por programador, analista de redes, web designer e educador, todos com experiência na área de educação. <a href=""> Saiba mais...</a> </p>
+                </div>
+                <div class="span4">
+                    <h4>Educação a Distância</h4>
+                    <p> A Educação a distância é uma modalidade de ensino onde o aluno e o professor não precisam estar juntos no tempo e espaço para que ocorra o aprendizado. <a href=""> Saiba mais...</a></p>
+                </div>
+                <div class="span4">
+                    <h4>Vantagens</h4>
+                    <p>O aluno de educação a distância é dono do seu próprio tempo, como não existe um momento específico para aula, a flexibilidade é a principal marca. <a href=""> Saiba mais...</a></p>
+                </div>
+                <div class="span4">
+                    <h4>Moodle</h4>
+                    <p> O Moodle é um software livre que executa um ambiente virtual de aprendizagem, onde alunos e professores podem interagir de diversas maneiras. <a href=""> Saiba mais...</a></p>
+                </div>-->
+            </div> 
+            <div class="span4">
+                <div class="span12">
+                    <h4>Noticias</h4>
+                    <p> A GTEDUC é uma empresa inovadora que se propõe oferecer tecnologias voltadas para o meio educacional público e privado, visando desde o desenvolvimento de programas que auxiliem na gestão das instituições como também serviços especializados em educação à distância.
+    A equipe da GTEDUC é multidisciplinar, formada por programador, analista de redes, web designer e educador, todos com experiência na área de educação. <a href=""> Saiba mais...</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
